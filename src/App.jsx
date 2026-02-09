@@ -45,7 +45,7 @@ function App() {
 
   return (
     //'pb-24' (padding bottom) and 'md:pb-0' (remove it on desktop)
-    <div className="min-h-screen bg-sandstone flex flex-col pb-24 md:pb-0">
+    <div className="min-h-screen bg-sandstone flex flex-col pb-24 md:pb-0 overflow-x-hidden">
       <Navbar 
         onSearch={handleSearch}
         searchQuery={searchQuery} 
