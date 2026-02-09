@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --font-artistic: "Dancing Script", cursive;
+  --color-heather: #877499;
+  --color-sandstone: #E6D4BF;
+  --color-peachcream: #FFE8D6;
+  --color-palepink: #F4F6F5;
+  --color-vintagecream: #E6D8C1;
+  --color-almondcream: #F2EBDD;
+  --color-porcelainmist: #F4F1EA;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* This hides the scrollbar while still allowing scrolling on touch devices */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
