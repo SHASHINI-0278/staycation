@@ -68,7 +68,7 @@ const Navbar = ({ onSearch, searchQuery }) => {
         </div>
 
         {isCompact && (
-          <div className="flex-1 flex justify-center animate-[fadeIn_0.2s_ease-out]">
+          <div className="flex md:flex-1 justify-center animate-[fadeIn_0.2s_ease-out]">
             <div 
             onClick={() => {
               setIsCompact(false);
@@ -112,7 +112,7 @@ const Navbar = ({ onSearch, searchQuery }) => {
         {/* 2. Center Section: Navigation + Search Bar */}
         {!isCompact && (
         <div
-          className={`flex flex-col items-center space-y-2 transition-opacity duration-200
+          className={`hidden md:flex flex-col items-center space-y-2 transition-opacity duration-200
           `}
         >
 
