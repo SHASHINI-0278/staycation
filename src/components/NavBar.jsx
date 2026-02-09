@@ -54,7 +54,7 @@ const Navbar = ({ onSearch, searchQuery }) => {
   
   return (
     <nav
-      className={`sticky top-0 z-50 bg-porcelainmist border-b border-gray-200 px-10 font-foundry shadow-sm 
+      className={`sticky top-0 z-50 bg-porcelainmist border-b border-gray-200 px-4 md:px-10 font-foundry shadow-sm 
         transition-all duration-300 
         ${isCompact ? "py-2" : "py-4"}
       `}
@@ -126,7 +126,7 @@ const Navbar = ({ onSearch, searchQuery }) => {
           </div>
 
           {/* Search Bar */}
-          <div className={`flex items-center border border-gray-200 rounded-full shadow-sm hover:shadow-md transition-all bg-palepink w-[850px] max-w-full h-[66px] relative ${isCalendarOpen || isGuestPickerOpen ? 'bg-[#f7f7f7] border-transparent' : ''}`}>
+          <div className={`flex items-center border border-gray-200 rounded-full shadow-sm hover:shadow-md transition-all bg-palepink w-full sm:w-[650px] lg:w-[850px] max-w-full h-[66px] relative ${isCalendarOpen || isGuestPickerOpen ? 'bg-[#f7f7f7] border-transparent' : ''}`}>
             
             {/* Search Input */}
             <div 

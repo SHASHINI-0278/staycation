@@ -53,7 +53,7 @@ function App() {
       {/* Passing the state to CategoryBar so it can change the category */}
       <CategoryBar active={selectedCategory} setCategory={setSelectedCategory} />
       
-      <main className="max-w-[1800px] mx-auto px-10 pt-8 flex-grow">
+      <main className="max-w-[1800px] mx-auto px-4 md:px-10 pt-8 flex-grow">
         {filteredListings.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
             {filteredListings.map((item) => (
