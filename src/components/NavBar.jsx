@@ -64,12 +64,16 @@ const Navbar = ({ onSearch, searchQuery }) => {
       <div className="flex items-center justify-between max-w-[1400px] mx-auto">
         
         {/* 1. Artistic Logo */}
-        <div className="flex-1 flex justify-start">
+        <div className="flex-1 flex items-center justify-start gap-2 cursor-pointer">
           <img
             src={staycationLogo}
             alt="Staycation logo"
-            className="h-8 md:h-10 object-contain cursor-pointer"
-          />        
+            className="h-7 md:h-9 object-contain"
+          />
+
+          <span className="text-xl md:text-2xl font-artistic text-heather whitespace-nowrap">
+            Staycation
+          </span>
         </div>
 
         {isCompact && (
