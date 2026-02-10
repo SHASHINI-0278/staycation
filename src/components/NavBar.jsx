@@ -1,7 +1,7 @@
 import GuestOption from "./GuestOption";
 import { Calendar } from "./Calendar";
 import { useState, useEffect, useRef } from "react";
-import staycationLogo from "./assets/staycationLogo.png";
+import staycationLogo from "src/components/assets/staycationLogo.png";
 
 const Navbar = ({ onSearch, searchQuery }) => {
   const [isCompact, setIsCompact] = useState(false);
