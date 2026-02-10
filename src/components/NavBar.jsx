@@ -1,6 +1,7 @@
 import GuestOption from "./GuestOption";
 import { Calendar } from "./Calendar";
 import { useState, useEffect, useRef } from "react";
+import staycationLogo from "../assets/staycation-logo.png";
 
 const Navbar = ({ onSearch, searchQuery }) => {
   const [isCompact, setIsCompact] = useState(false);
@@ -64,7 +65,11 @@ const Navbar = ({ onSearch, searchQuery }) => {
         
         {/* 1. Artistic Logo */}
         <div className="flex-1 flex justify-start">
-          <span className="text-3xl font-artistic text-heather cursor-pointer whitespace-nowrap">Staycation</span>
+          <img
+            src={staycationLogo}
+            alt="Staycation logo"
+            className="h-8 md:h-10 object-contain cursor-pointer"
+          />        
         </div>
 
         {isCompact && (
