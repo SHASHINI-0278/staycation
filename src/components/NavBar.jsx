@@ -134,7 +134,7 @@ const Navbar = ({ onSearch, searchQuery }) => {
 
               {/* Navigation Tabs - Reduced spacing */}
               {/* Search Bar */}
-              <div className={`flex items-center border border-gray-200 rounded-full shadow-sm hover:shadow-md transition-all bg-palepink w-full max-w-4xl mx-auto h-[66px] relative ${isCalendarOpen || isGuestPickerOpen ? 'bg-[#f7f7f7] border-transparent' : ''}`}>
+              <div className={`flex items-center border border-gray-200 rounded-full shadow-sm hover:shadow-md transition-all bg-palepink w-full max-w-7xl mx-auto h-[66px] relative ${isCalendarOpen || isGuestPickerOpen ? 'bg-[#f7f7f7] border-transparent' : ''}`}>
 
                 {/* Search Input */}
                 <div
