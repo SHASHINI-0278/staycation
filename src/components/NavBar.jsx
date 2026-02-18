@@ -138,7 +138,7 @@ const Navbar = ({ onSearch, searchQuery }) => {
 
                 {/* Search Input */}
                 <div
-                  className="flex flex-col flex-[1.5] px-8 py-2 hover:bg-gray-100 rounded-full cursor-pointer transition-colors relative"
+                  className="flex flex-col flex-1 px-8 py-2 hover:bg-gray-100 rounded-full cursor-pointer transition-colors relative"
                   onClick={() => inputRef.current.focus()}
                 >
                   <span className="text-[12px] font-bold text-gray-900 tracking-wide">Where</span>
@@ -238,7 +238,7 @@ const Navbar = ({ onSearch, searchQuery }) => {
                 <div className="h-8 border-l border-gray-200"></div>
 
                 {/* Guest Picker Section */}
-                <div className="relative flex flex-1 items-center justify-between pl-8 pr-2 py-2 hover:bg-gray-100 rounded-full cursor-pointer transition-colors group">
+                <div className="relative flex flex-1 min-w-[160px] items-center justify-between pl-8 pr-2 py-2 hover:bg-gray-100 rounded-full cursor-pointer transition-colors group">
                   <div
                     className="flex flex-col flex-grow"
                     onClick={() => {
@@ -247,7 +247,7 @@ const Navbar = ({ onSearch, searchQuery }) => {
                     }}
                   >
                     <span className="text-[12px] font-bold text-gray-900 tracking-wide">Who</span>
-                    <span className="text-sm text-gray-500">
+                    <span className="text-sm text-gray-500 whitespace-nowrap">
                       {totalGuests > 0 ? `${totalGuests} guests` : "Add guests"}
                     </span>
                   </div>
