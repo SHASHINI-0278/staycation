@@ -75,10 +75,10 @@ const Navbar = ({ onSearch, searchQuery }) => {
             <img
               src={staycationLogo}
               alt="Staycation logo"
-              className="h-7 md:h-9 object-contain"
+              className="h-9 md:h-9 object-contain"
             />
 
-            <span className="text-xl md:text-2xl font-artistic text-heather whitespace-nowrap">
+            <span className="text-xxxl md:text-2xl font-artistic text-heather whitespace-nowrap">
               Staycation
             </span>
           </div>
