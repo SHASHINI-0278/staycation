@@ -78,7 +78,7 @@ const Navbar = ({ onSearch, searchQuery }) => {
               className="h-9 md:h-9 object-contain"
             />
 
-            <span className="text-xxxl md:text-2xl font-artistic text-heather whitespace-nowrap">
+            <span className="text-3xl md:text-2xl font-artistic text-heather whitespace-nowrap">
               Staycation
             </span>
           </div>
