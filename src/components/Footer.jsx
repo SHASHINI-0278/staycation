@@ -45,10 +45,9 @@ const Footer = () => {
             </span>
             <span className="cursor-pointer">USD</span>
             <span className="flex items-center space-x-4">
-              {/* Simple Social Icons Placeholder */}
-              <span className="hover:text-heather cursor-pointer">FB</span>
-              <span className="hover:text-heather cursor-pointer">TW</span>
-              <span className="hover:text-heather cursor-pointer">IG</span>
+              <span className="hover:text-heather cursor-pointer hover:underline">Facebook</span>
+              <span className="hover:text-heather cursor-pointer hover:underline">Twitter</span>
+              <span className="hover:text-heather cursor-pointer hover:underline">Instagram</span>
             </span>
           </div>
         </div>

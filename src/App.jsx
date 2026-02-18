@@ -23,22 +23,22 @@ function App() {
   const filteredListings = useMemo(() => {
 
     return listings.filter((item) => {
-    // 1. Category Filter
-    // If searchQuery exists, matchesCategory is always true.
-    // This "unlocks" the search bar from the category pills.
+      // 1. Category Filter
+      // If searchQuery exists, matchesCategory is always true.
+      // This "unlocks" the search bar from the category pills.
       const matchesCategory = searchQuery !== "" ? true : item.category === selectedCategory;
-    // 2. Search Text Filter
-      const matchesSearch = 
-        item.country.toLowerCase().includes(searchQuery.toLowerCase()) || 
+      // 2. Search Text Filter
+      const matchesSearch =
+        item.country.toLowerCase().includes(searchQuery.toLowerCase()) ||
         item.location.toLowerCase().includes(searchQuery.toLowerCase());
-    // 3. Guest Filter: Only show homes that can fit the number of guests
-    // Note: assumes your data has a 'maxGuests' property!
+      // 3. Guest Filter: Only show homes that can fit the number of guests
+      // Note: assumes your data has a 'maxGuests' property!
       const matchesGuests = guestCount > 0 ? item.maxGuests >= guestCount : true;
 
-    // Date filtering not implemented yet (UI only)
+      // Date filtering not implemented yet (UI only)
       const matchesDate = startDate ? true : true;
 
-    // Return true only if EVERYTHING matches
+      // Return true only if EVERYTHING matches
       return matchesCategory && matchesSearch && matchesGuests && matchesDate;
     });
   }, [listings, selectedCategory, searchQuery, guestCount]);
@@ -46,18 +46,20 @@ function App() {
   return (
     //'pb-24' (padding bottom) and 'md:pb-0' (remove it on desktop)
     <div className="min-h-screen bg-sandstone flex flex-col pb-24 md:pb-0 overflow-x-hidden">
-      <Navbar 
+      <Navbar
         onSearch={handleSearch}
-        searchQuery={searchQuery} 
+        searchQuery={searchQuery}
       />
       {/* Passing the state to CategoryBar so it can change the category */}
       <CategoryBar active={selectedCategory} setCategory={setSelectedCategory} />
-      
+
       <main className="max-w-[1800px] mx-auto px-4 md:px-10 pt-8 flex-grow">
         {filteredListings.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {filteredListings.map((item) => (
-              <PropertyCard key={item.id} item={item} />
+            {filteredListings.map((item, index) => (
+              <div key={item.id} className="animate-fadeIn" style={{ animationDelay: `${index * 0.05}s` }}>
+                <PropertyCard item={item} />
+              </div>
             ))}
           </div>
         ) : (
@@ -68,14 +70,14 @@ function App() {
               We couldn't find any listings matching "{searchQuery}". Try adjusting your filters or clearing them to see more.
             </p>
 
-            <button 
+            <button
               onClick={() => {
                 setSearchQuery("");
                 setSelectedCategory("Trending");
                 setGuestCount(0);
                 setStartDate(null);
                 setEndDate(null);
-              }} 
+              }}
               className="mt-8 px-8 py-3 bg-black text-white rounded-xl font-semibold hover:bg-gray-800 transition-all shadow-lg active:scale-95"
             >
               Clear all filters
