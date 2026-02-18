@@ -133,14 +133,6 @@ const Navbar = ({ onSearch, searchQuery }) => {
             >
 
               {/* Navigation Tabs - Reduced spacing */}
-              <div className="flex space-x-8 mb-1">
-                <button className="text-[16px] font-medium text-gray-900 relative after:content-[''] after:absolute after:w-5 after:h-[2px] after:bg-black after:bottom-[-6px] after:left-1/2 after:-translate-x-1/2">
-                  Stays
-                </button>
-                <button className="text-[16px] text-gray-500 hover:text-gray-800 transition-colors">Experiences</button>
-                <button className="text-[16px] text-gray-500 hover:text-gray-800 transition-colors">Online Experiences</button>
-              </div>
-
               {/* Search Bar */}
               <div className={`flex items-center border border-gray-200 rounded-full shadow-sm hover:shadow-md transition-all bg-palepink w-full sm:w-[650px] lg:w-[850px] max-w-full h-[66px] relative ${isCalendarOpen || isGuestPickerOpen ? 'bg-[#f7f7f7] border-transparent' : ''}`}>
 
