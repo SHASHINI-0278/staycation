@@ -43,7 +43,7 @@ const Footer = () => {
             <span className="flex items-center space-x-2 cursor-pointer">
               <span className="text-heather underline">English (US)</span>
             </span>
-            <span className="cursor-pointer">USD</span>
+            <span className="cursor-pointer">INR</span>
             <span className="flex items-center space-x-4">
               <span className="hover:text-heather cursor-pointer hover:underline">Facebook</span>
               <span className="hover:text-heather cursor-pointer hover:underline">Twitter</span>
